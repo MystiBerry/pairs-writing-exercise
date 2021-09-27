@@ -3,7 +3,7 @@ title: Users
 order: xx
 ---
 
-## Managing Users
+## Manging Users
 
 Admin Users can manage the access of other users in their mParticle Account from the **User Management** tab of their User Settings page:
 
@@ -29,3 +29,57 @@ mParticle's User Roles are:
 * **Compliance** - Can view and manage the [Requests Page](/guides/data-subject-requests/#managing-data-subject-requests-in-the-mparticle-dashboard). Has Read Only access in other parts of the dashboard
 * **Admin & Compliance** - All Admin permissions, plus can view and manage the [Requests Page](/guides/data-subject-requests/#managing-data-subject-requests-in-the-mparticle-dashboard)
 * **Support Access** - All Admin permissions except for user management capabilities.  This role should be used to delegate access to an mParticle support representative while troubleshooting a ticket.  This role has access to end-user PII within the account.
+
+## Advanced Feature: Using the Platform API
+
+If you have the proper credentials, you can issue API calls to get a list of users:
+
+```
+curl \
+  -X GET \
+  -H "Authorization: Bearer YWIxMjdi883GHBBDnjsdKAJQxNjdjYUUJABbg6hdI.8V6HhxW-" \
+  "https://api.mparticle.com/v1/users?accountId=1"
+  ```
+  
+  example response
+  
+  ```
+  {
+  "data": [
+    {
+      "first_name": "Test",
+      "last_name": "User",
+      "email": "testuser@mparticle.com",
+      "data_type": "usr"
+    }
+  ],
+  "dataType": "user",
+  "errors": null
+}
+```
+
+You can also get information about a single user:
+
+```
+curl \
+  -X GET \
+  -H "Authorization: Bearer YWIxMjdi883GHBBDnjsdKAJQxNjdjYUUJABbg6hdI.8V6HhxW-" \
+  "https://api.mparticle.om/v1/users/test40mparticle2Ecom?accountId=1"
+```
+
+Example Response
+
+```
+{
+  "data": [
+    {
+      "first_name": "Test",
+      "last_name": "User",
+      "email": "test@mparticle.com",
+      "data_type": "user"
+    }
+  ],
+  "dataType": "user",
+  "errors: null
+}
+```
