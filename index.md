@@ -7,11 +7,11 @@ order: xx
 
 Admin Users can manage the access of other users in their mParticle Account from the **User Management** tab of their User Settings page:
 
-![](/images/Platform-Update-Mange-Users-042019.png)
+![](/images/Platform-Update-Manage-Users-042019.png)
 
 To add a new user, provide first and last name, an email address, and select the user's permissions. See [Roles](#roles) for more on permisisons.
 
-![](/images/Platform-Update-Mange-Users-New-User-042019.png)
+![](/images/Platform-Update-Manage-Users-New-User-042019.png)
 
 
 ## Roles
